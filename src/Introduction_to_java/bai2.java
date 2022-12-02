@@ -6,7 +6,7 @@ public class bai2 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Số cần đọc là");
-        int number = scanner.nextInt();
+        int number = Integer.parseInt(scanner.nextLine());
         int units = (number % 100) % 10;
         int dozens = (number % 100) / 10;
         int hundreds = (number / 100);
