@@ -9,6 +9,7 @@ public class bai2 {
         int number = Integer.parseInt(scanner.nextLine());
         int count = 0;
         int N = 0;
+        System.out.println(number + " sô nguyên tố đầu tiên ");
         for (int i = 2; count < number; i++) {
             for (int j = 2; j <= Math.sqrt(i); j++) {
                 if (i % j == 0) {
