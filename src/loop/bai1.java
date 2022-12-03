@@ -1,4 +1,4 @@
-package loop_array;
+package loop;
 
 import javax.swing.*;
 import java.util.Scanner;
