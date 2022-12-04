@@ -7,10 +7,10 @@ public class deleteArrayElement {
         Scanner scanner = new Scanner(System.in);
         int number, i, j, delete;
         do {
-            System.out.println("Nhập vào số phần tử trong mảng");
+            System.out.println("Nhập độ dài mảng");
             number = Integer.parseInt(scanner.nextLine());
         } while (number <= 0);
-        int array[] = new int[number];
+        int [] array = new int[number];
         System.out.println("Nhập các phần tử trong mảng");
         for (i = 0; i < number; i++) {
             System.out.print("Nhập phần tứ thứ " + i + " : ");
