@@ -1,12 +1,11 @@
-package loop;
+package loop_array;
 
-import javax.swing.*;
 import java.util.Scanner;
 
-public class bai1 {
+public class print {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Menu có: 1.Print the rectangle 2.Print the square triangle 3.Print isosceles triangle");
+        System.out.println("Menu có: 1.Print the rectangle 2.Print the square triangle 3.Print isosceles triangle 4.Exit");
         System.out.println("Nhập menu bạn muốn chọn");
         int number = Integer.parseInt(scanner.nextLine());
         System.out.println("Nhập chiều cao");
@@ -80,4 +79,5 @@ public class bai1 {
                 break;
         }
     }
+
 }
