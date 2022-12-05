@@ -1,4 +1,4 @@
-package class_oop_java;
+package class_oop_java.thuc_hanh;
 
 import java.util.Scanner;
 
