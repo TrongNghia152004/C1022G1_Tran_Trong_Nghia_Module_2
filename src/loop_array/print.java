@@ -2,7 +2,7 @@ package loop_array;
 
 import java.util.Scanner;
 
-public class print {
+public class Print {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Menu có: 1.Print the rectangle 2.Print the square triangle 3.Print isosceles triangle 4.Exit");

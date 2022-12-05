@@ -3,7 +3,7 @@ package loop_array;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class addElementToArray {
+public class AddElementToArray {
     public static void main(String[] args) {
         int number;
         Scanner scanner = new Scanner(System.in);
@@ -25,9 +25,8 @@ public class addElementToArray {
             array[i] = array[i - 1];
         }
         array[index] = find;
-        for (int i : array) {
-            System.out.print(i + "\t");
-        }
+        System.out.println(Arrays.toString(array));
+
     }
 }
 

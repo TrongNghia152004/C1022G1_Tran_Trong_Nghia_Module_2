@@ -3,7 +3,7 @@ package loop_array;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class mergeArray {
+public class MergeArray {
     public static void main(String[] args) {
         int num1, num2, i, count = 0;
         Scanner scanner = new Scanner(System.in);

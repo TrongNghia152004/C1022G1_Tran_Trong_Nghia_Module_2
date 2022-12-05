@@ -2,7 +2,7 @@ package loop_array;
 
 import java.util.Scanner;
 
-public class firstNPrime {
+public class FirstNPrime {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Nhập vào n số nguyên tố đầu tiên");
