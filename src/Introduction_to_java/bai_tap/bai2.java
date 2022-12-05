@@ -1,4 +1,4 @@
-package Introduction_to_java;
+package Introduction_to_java.bai_tap;
 
 import java.util.Scanner;
 
