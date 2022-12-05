@@ -8,16 +8,16 @@ public class MergeArray {
         int i, count = 0;
         Scanner scanner = new Scanner(System.in);
         System.out.println("Nhập độ dài mảng 1");
-        int length1 = Integer.parseInt(scanner.nextLine());
+        int size1 = Integer.parseInt(scanner.nextLine());
 
-        int[] arr1 = new int[length1];
+        int[] arr1 = new int[size1];
         for (i = 0; i < arr1.length; i++) {
             System.out.println("Nhập phần tử thứ " + i + " của mảng 1: ");
             arr1[i] = Integer.parseInt(scanner.nextLine());
         }
         System.out.println("Nhập độ dài mảng 2");
-        int length2 = Integer.parseInt(scanner.nextLine());
-        int[] arr2 = new int[length2];
+        int size2 = Integer.parseInt(scanner.nextLine());
+        int[] arr2 = new int[size2];
         for (i = 0; i < arr2.length; i++) {
             System.out.println("Nhập phần tử thứ " + i + " của mảng 2: ");
             arr2[i] = Integer.parseInt(scanner.nextLine());

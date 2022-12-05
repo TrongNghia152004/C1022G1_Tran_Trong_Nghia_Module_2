@@ -8,8 +8,8 @@ public class DeleteArrayElement {
         Scanner scanner = new Scanner(System.in);
         int i, j, delete;
         System.out.println("Nhập độ dài mảng");
-        int length = Integer.parseInt(scanner.nextLine());
-        int[] array = new int[length];
+        int size = Integer.parseInt(scanner.nextLine());
+        int[] array = new int[size];
         System.out.println("Nhập các phần tử trong mảng");
         for (i = 0; i < array.length; i++) {
             System.out.print("Nhập phần tứ thứ " + i + " : ");

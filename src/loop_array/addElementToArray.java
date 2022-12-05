@@ -7,8 +7,8 @@ public class AddElementToArray {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Nhập độ dài mảng");
-        int length = Integer.parseInt(scanner.nextLine());
-        int[] array = new int[length];
+        int size = Integer.parseInt(scanner.nextLine());
+        int[] array = new int[size];
         for (int i = 0; i < array.length; i++) {
             System.out.println("Nhập phần tử thứ " + i);
             array[i] = Integer.parseInt(scanner.nextLine());
