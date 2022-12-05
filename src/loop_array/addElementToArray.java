@@ -5,13 +5,10 @@ import java.util.Scanner;
 
 public class AddElementToArray {
     public static void main(String[] args) {
-        int number;
         Scanner scanner = new Scanner(System.in);
-        do {
-            System.out.println("Nhập độ dài mảng");
-            number = Integer.parseInt(scanner.nextLine());
-        } while (number <= 0);
-        int[] array = new int[number];
+        System.out.println("Nhập độ dài mảng");
+        int length = Integer.parseInt(scanner.nextLine());
+        int[] array = new int[length];
         for (int i = 0; i < array.length; i++) {
             System.out.println("Nhập phần tử thứ " + i);
             array[i] = Integer.parseInt(scanner.nextLine());

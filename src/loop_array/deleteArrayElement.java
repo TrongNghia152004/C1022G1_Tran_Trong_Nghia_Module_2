@@ -6,12 +6,10 @@ import java.util.Scanner;
 public class DeleteArrayElement {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int number, i, j, delete;
-        do {
-            System.out.println("Nhập độ dài mảng");
-            number = Integer.parseInt(scanner.nextLine());
-        } while (number <= 0);
-        int[] array = new int[number];
+        int i, j, delete;
+        System.out.println("Nhập độ dài mảng");
+        int length = Integer.parseInt(scanner.nextLine());
+        int[] array = new int[length];
         System.out.println("Nhập các phần tử trong mảng");
         for (i = 0; i < array.length; i++) {
             System.out.print("Nhập phần tứ thứ " + i + " : ");
