@@ -1,4 +1,4 @@
-package loop_array;
+package loop_array.bai_tap;
 
 import java.util.Scanner;
 
