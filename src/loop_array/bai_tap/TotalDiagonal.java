@@ -9,11 +9,9 @@ public class TotalDiagonal {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Nhập độ dài dòng");
         int sizeRow = Integer.parseInt(scanner.nextLine());
-        System.out.println("Nhập độ dài cột");
-        int sizeCol = Integer.parseInt(scanner.nextLine());
-        int[][] arr = new int[sizeRow][sizeCol];
+        int[][] arr = new int[sizeRow][sizeRow];
         for (i = 0; i < sizeRow; i++) {
-            for (j = 0; j < sizeCol; j++) {
+            for (j = 0; j < sizeRow; j++) {
                 System.out.println("array [ " + i + " ]" + "[ " + j + " ]");
                 arr[i][j] = Integer.parseInt(scanner.nextLine());
                 if (i == j) {
