@@ -12,14 +12,14 @@ public class MainQuadraticEquation {
         System.out.println("Nhập c: ");
         double c = scanner.nextDouble();
         QuadraticEquation quadraticEquation = new QuadraticEquation(a, b, c);
-        if (quadraticEquation.getDiscriminant() > 0) {
+        if (quadraticEquation.getDelta() > 0) {
             System.out.println("Phương trình có 2 nghiệm phân biệt là: ");
-            System.out.println("x1 = " + quadraticEquation.getRoot1());
-            System.out.println("x2 = " + quadraticEquation.getRoot2());
-        } else if (quadraticEquation.getDiscriminant() == 0) {
+            System.out.println("x1 = " + quadraticEquation.getR1());
+            System.out.println("x2 = " + quadraticEquation.getR2());
+        } else if (quadraticEquation.getDelta() == 0) {
             System.out.println("Phương trình có nghiệm kép là : ");
-            System.out.println("x1 = x2 = " + quadraticEquation.getDoubleSolution());
-        } else if (quadraticEquation.getDiscriminant() < 0) {
+            System.out.println("x1 = x2 = " + quadraticEquation.getR12());
+        } else if (quadraticEquation.getDelta() < 0) {
             System.out.println("Phương trình vô nghiệm");
         }
     }
