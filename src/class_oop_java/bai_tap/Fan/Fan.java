@@ -1,9 +1,9 @@
 package class_oop_java.bai_tap.Fan;
 
 public class Fan {
-    final int SLOW = 1;
-    final int MEDIUM = 2;
-    final int FAST = 3;
+    final int slow = 1;
+    final int medium = 2;
+    final int fast = 3;
     private int speed;
     private boolean on;
     private String color;
@@ -26,15 +26,15 @@ public class Fan {
     }
 
     public int getSLOW() {
-        return SLOW;
+        return slow;
     }
 
     public int getMEDIUM() {
-        return MEDIUM;
+        return medium;
     }
 
     public int getFAST() {
-        return FAST;
+        return fast;
     }
 
     public void setSpeed(int speed) {
@@ -66,16 +66,16 @@ public class Fan {
     }
 
     public String toString() {
-        String state = "";
+        String result = "";
         if (this.isOn()) {
-            state += ("Fan is on\n");
-            state += ("Speed: " + this.speed + "\n");
+            result += ("Fan is on\n");
+            result += ("Speed: " + this.speed + "\n");
         } else {
-            state += ("Fan is off\n");
+            result += ("Fan is off\n");
         }
-        state += ("Color: " + this.color + "\n");
-        state += ("Radius: " + this.radius + "\n");
-        return state;
+        result += ("Color: " + this.color + "\n");
+        result += ("Radius: " + this.radius + "\n");
+        return result;
     }
 }
 
