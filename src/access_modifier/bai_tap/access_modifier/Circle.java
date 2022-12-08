@@ -1,18 +1,18 @@
 package access_modifier.bai_tap.access_modifier;
 
-public class AccessModifier {
+public class Circle {
     private double radius;
     private String color;
 
-    public AccessModifier() {
+    public Circle() {
         this(1,"red");
     }
-    public AccessModifier( double radius , String color){
+    public Circle( double radius , String color){
         this.radius = radius;
         this.color = color;
     }
 
-    public AccessModifier(double radius) {
+    public Circle(double radius) {
         this.radius = radius;
     }
 

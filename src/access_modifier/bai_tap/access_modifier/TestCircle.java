@@ -7,7 +7,7 @@ public class TestCircle {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Nhập bán kính: ");
         int radius = Integer.parseInt(scanner.nextLine());
-        AccessModifier circle = new AccessModifier(radius);
+        Circle circle = new Circle(radius);
         System.out.println("Bán kính hình tròn là: " + circle.getRadius());
         System.out.println("Diện tích hình tròn là : " + circle.getArea());
     }
