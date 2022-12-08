@@ -9,10 +9,10 @@ public class Test {
         String name = scanner.nextLine();
         System.out.println("Nhập class: ");
         String classes = scanner.nextLine();
-        Student student = new Student();
-        student.setName(name);
-        student.setClasses(classes);
-        System.out.println("Họ và tên: " + student.getName());
-        System.out.println("Lớp: " + student.getClasses());
+        Student student = new Student(name, classes);
+        System.out.println(student);
+        student.setName("Nghĩa");
+        student.setClasses("C1022G1");
+        System.out.println(student);
     }
 }

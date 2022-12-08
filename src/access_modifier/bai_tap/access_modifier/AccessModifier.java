@@ -3,7 +3,6 @@ package access_modifier.bai_tap.access_modifier;
 public class AccessModifier {
     private double radius;
     private String color;
-    private double area;
 
     public AccessModifier() {
         this(1,"red");
@@ -26,6 +25,7 @@ public class AccessModifier {
     }
 
     public double getArea() {
+
         return Math.pow(this.radius, 2) * Math.PI;
     }
 
@@ -35,9 +35,5 @@ public class AccessModifier {
 
     public void setColor(String color) {
         this.color = color;
-    }
-
-    public void setArea(double area) {
-        this.area = area;
     }
 }
