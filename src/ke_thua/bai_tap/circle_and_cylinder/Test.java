@@ -1,4 +1,7 @@
-package ke_thua.bai_tap;
+package ke_thua.bai_tap.circle_and_cylinder;
+
+import ke_thua.bai_tap.circle_and_cylinder.Circle;
+import ke_thua.bai_tap.circle_and_cylinder.Cylinder;
 
 import java.util.Scanner;
 
