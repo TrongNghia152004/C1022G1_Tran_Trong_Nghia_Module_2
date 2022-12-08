@@ -1,9 +1,9 @@
 package class_oop_java.bai_tap.Fan;
 
 public class Fan {
-    final int slow = 1;
-    final int medium = 2;
-    final int fast = 3;
+    final int SLOW= 1;
+    final int MEDIUM = 2;
+    final int FAST = 3;
     private int speed;
     private boolean on;
     private String color;
@@ -26,15 +26,15 @@ public class Fan {
     }
 
     public int getSLOW() {
-        return slow;
+        return SLOW;
     }
 
     public int getMEDIUM() {
-        return medium;
+        return MEDIUM;
     }
 
     public int getFAST() {
-        return fast;
+        return FAST;
     }
 
     public void setSpeed(int speed) {
