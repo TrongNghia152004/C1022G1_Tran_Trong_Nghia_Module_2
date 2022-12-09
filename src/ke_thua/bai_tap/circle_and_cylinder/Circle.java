@@ -36,8 +36,8 @@ public class Circle {
     @Override
     public String toString() {
         return "Circle{" +
-                "radius=" + radius +
-                ", color='" + color + '\'' +
+                "radius=" + this.radius +
+                ", color='" + this.color + '\'' +
                 ", area=" + getArea() +
                 '}';
     }
