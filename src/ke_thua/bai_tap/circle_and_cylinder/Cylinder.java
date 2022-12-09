@@ -1,8 +1,6 @@
 package ke_thua.bai_tap.circle_and_cylinder;
 
-import ke_thua.bai_tap.circle_and_cylinder.Circle;
-
-class Cylinder extends Circle {
+public class Cylinder extends Circle {
     private float length;
 
     public Cylinder(double radius, String color, float length) {
