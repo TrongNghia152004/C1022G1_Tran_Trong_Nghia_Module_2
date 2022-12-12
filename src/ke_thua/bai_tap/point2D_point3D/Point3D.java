@@ -3,7 +3,7 @@ package ke_thua.bai_tap.point2D_point3D;
 import java.util.Arrays;
 
 public class Point3D extends Point2D {
-    float z = 0.0f;
+    private float z = 0.0f;
 
     public Point3D() {
 
@@ -36,8 +36,8 @@ public class Point3D extends Point2D {
         return "Point3D{" +
                 "x=" + super.getX() +
                 ", y=" + super.getY() +
-                "z=" + z +
-                ", xyz=" + Arrays.toString(getXYZ()) +
+                ", z=" + z +
+                ", arr[xyz]=" + Arrays.toString(getXYZ()) +
                 '}';
     }
 }

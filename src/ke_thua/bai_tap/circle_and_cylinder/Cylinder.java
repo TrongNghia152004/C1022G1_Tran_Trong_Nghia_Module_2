@@ -21,15 +21,15 @@ public class Cylinder extends Circle {
     }
 
     public double getVolume() {
-        return getArea() * this.length;
+        return super.getArea() * this.length;
     }
 
     @Override
     public String toString() {
         return "Cylinder{"
                 +
-                "radius= " + getRadius() +
-                ", color= " + getColor() + '\'' +
+                "radius= " + super.getRadius() +
+                ", color= " + super.getColor() + '\'' +
                 ",length= " + this.length +
                 ", area= " + super.getArea() +
                 ", volume=" + getVolume() +
