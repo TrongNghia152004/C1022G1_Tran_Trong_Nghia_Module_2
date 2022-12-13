@@ -1,5 +1,5 @@
 package abstract_interface.bai_tap.resizeable;
 
-public interface Resizeable {
+public interface IResizeable {
     void resize(double percent);
 }

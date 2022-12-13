@@ -1,5 +1,5 @@
 package abstract_interface.bai_tap.Colorable;
 
-public interface Colorable {
+public interface IColorable {
     void howToColor();
 }

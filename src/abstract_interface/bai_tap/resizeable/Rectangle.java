@@ -1,7 +1,8 @@
 package abstract_interface.bai_tap.resizeable;
 
-public class Rectangle extends Shape {
-    private double length, width;
+public class Rectangle extends Shape{
+    private double length;
+    private double width;
 
     public Rectangle(String color, double length, double width) {
         super(color);
@@ -42,4 +43,5 @@ public class Rectangle extends Shape {
         this.width = this.width + this.width * percent;
         this.length = this.length + this.length * percent;
     }
+    
 }

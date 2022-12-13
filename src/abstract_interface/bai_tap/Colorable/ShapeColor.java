@@ -1,6 +1,6 @@
 package abstract_interface.bai_tap.Colorable;
 
-public abstract class ShapeColor implements Colorable {
+public abstract class ShapeColor implements IColorable {
     private boolean fill;
     private String color;
 
