@@ -13,9 +13,9 @@ public class Test {
         Scanner sc = new Scanner(System.in);
         System.out.println("-----Quản Lí Sản Phẩm-----");
         System.out.println("1. Thêm sản phẩm");
-        System.out.println("2. Sửa thông tin sản phẩm");
+        System.out.println("2. Hiển thị danh sách sản phẩm");
         System.out.println("3. Xóa sản phẩm");
-        System.out.println("4. Hiển thị danh sách sản phẩm");
+        System.out.println("4. Sửa thông tin sản phẩm");
         System.out.println("5. Tìm kiếm sản phẩm theo tên");
         System.out.println("6. Sắp xếp sản phẩm tăng dần");
         System.out.println("7. Sắp xếp sản phẩm giảm dần");
@@ -34,6 +34,13 @@ public class Test {
                     productManager.addProduct(new Product(id, name, price));
                     break;
                 case 2:
+                    productManager.displayProduct();
+                case 3:
+                    System.out.print("Nhập id sản phẩm: ");
+                    id = Integer.parseInt(sc.nextLine());
+                    productManager.removeProduct(id);
+                    break;
+                case 4:
                     System.out.print("Nhập id sản phẩm cấn sửa: ");
                     int fixId = Integer.parseInt(sc.nextLine());
                     System.out.print("Nhập id mới của sản phẩm: ");
@@ -43,14 +50,6 @@ public class Test {
                     System.out.print("Nhập giá mới của sản phẩm: ");
                     price = Integer.parseInt(sc.nextLine());
                     productManager.updateProduct(fixId, new Product(id, name, price));
-                    break;
-                case 3:
-                    System.out.print("Nhập id sản phẩm: ");
-                    id = Integer.parseInt(sc.nextLine());
-                    productManager.removeProduct(id);
-                    break;
-                case 4:
-                    productManager.displayProduct();
                     break;
                 case 5:
                     System.out.println("Nhập tên sản phẩm: ");
