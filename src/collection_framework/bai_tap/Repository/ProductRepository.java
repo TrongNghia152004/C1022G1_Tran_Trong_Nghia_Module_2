@@ -10,9 +10,9 @@ import java.util.Scanner;
 public class ProductRepository implements IProductRepository {
     public static List<Product> productList = new ArrayList<>();
 
-    Product product1 = new Product(1, "Quần chíp", 10000);
-    Product product3 = new Product(3, "Áo ngực BRA", 20000);
-    Product product2 = new Product(2, "Thuốc tránh thai", 30000);
+    Product product1 = new Product(1, "Quần dài", 250000);
+    Product product3 = new Product(3, "Áo khoác", 500000);
+    Product product2 = new Product(2, "Thuốc sốt", 30000);
 
     public ProductRepository() {
         productList.add(product1);
@@ -36,14 +36,18 @@ public class ProductRepository implements IProductRepository {
     @Override
     public void removeProduct(int id) {
         for (int i = 0; i < productList.size(); i++) {
-            System.out.println(productList.get(i));
+            if(productList.get(i).getId()==id) {
+                productList.remove(productList.get(i));
+            }
         }
     }
 
     @Override
     public void searchProduct(String name) {
-        for (int i = 0; i < productList.size(); i++) {
-            System.out.println(productList.get(i));
+        for (Product product : productList) {
+            if(product.getProductName().equals(name)){
+                System.out.println(product);
+            }
         }
     }
 
