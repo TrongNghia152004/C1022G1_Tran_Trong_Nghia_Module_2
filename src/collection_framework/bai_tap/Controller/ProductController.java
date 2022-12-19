@@ -6,7 +6,7 @@ import collection_framework.bai_tap.Service.ProductManager;
 
 import java.util.Scanner;
 
-public class Test {
+public class ProductController {
     private static IProductService productManager = new ProductManager();
 
     public static void main(String[] args) {
