@@ -41,4 +41,19 @@ public class ProductManager implements IProductService {
     public void sortDescending() {
         repository.sortDescending();
     }
+
+    @Override
+    public Product findById(int id) {
+        return repository.findById(id);
+    }
+
+    @Override
+    public void findByName(String name) {
+        repository.findByName(name);
+    }
+
+    @Override
+    public void searchPriceRange(int lowPrice, int highPrice) {
+        repository.searchPriceRange(lowPrice,highPrice);
+    }
 }

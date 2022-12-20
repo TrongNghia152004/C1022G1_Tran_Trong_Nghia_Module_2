@@ -16,4 +16,11 @@ public interface IProductRepository {
     void sortAscending();
 
     void sortDescending();
+
+    Product findById(int id);
+
+    void findByName(String name);
+
+    void searchPriceRange(int lowPrice , int highPrice);
+
 }

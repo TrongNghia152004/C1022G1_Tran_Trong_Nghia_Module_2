@@ -5,13 +5,12 @@ import collection_framework.bai_tap.Model.Product;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.Scanner;
 
 public class ProductRepository implements IProductRepository {
     public static List<Product> productList = new ArrayList<>();
 
-    Product product1 = new Product(1, "Quần dài", 250000);
-    Product product3 = new Product(3, "Áo khoác", 500000);
+    Product product1 = new Product(1, "Thuốc cảm", 25000);
+    Product product3 = new Product(3, "Thuốc ho", 50000);
     Product product2 = new Product(2, "Thuốc sốt", 30000);
 
     public ProductRepository() {
@@ -34,9 +33,20 @@ public class ProductRepository implements IProductRepository {
     }
 
     @Override
-    public void removeProduct(int id) {
+    public void updateProduct(int id, Product product) {
         for (int i = 0; i < productList.size(); i++) {
-            if(productList.get(i).getId()==id) {
+            if (productList.get(id).getId() == product.getId()) {
+                productList.set(i, product);
+                break;
+            }
+        }
+    }
+
+    @Override
+    public void removeProduct(int id) {
+
+        for (int i = 0; i < productList.size(); i++) {
+            if (productList.get(i).getId() == id) {
                 productList.remove(productList.get(i));
             }
         }
@@ -45,7 +55,7 @@ public class ProductRepository implements IProductRepository {
     @Override
     public void searchProduct(String name) {
         for (Product product : productList) {
-            if(product.getProductName().equals(name)){
+            if (product.getProductName().equals(name)) {
                 System.out.println(product);
             }
         }
@@ -54,22 +64,43 @@ public class ProductRepository implements IProductRepository {
     @Override
     public void sortAscending() {
         Collections.sort(productList);
+        Collections.reverse(productList);
     }
 
     @Override
     public void sortDescending() {
         Collections.sort(productList);
-        Collections.reverse(productList);
+    }
 
+
+
+    @Override
+    public Product findById(int id) {
+        for (Product c : productList) {
+            if (c.getId() == id) {
+                return c;
+            }
+        }
+        return null;
     }
 
     @Override
-    public void updateProduct(int id, Product product) {
-        for (int i = 0; i < productList.size(); i++) {
-            if (productList.get(i).getId() == id) {
-                productList.set(productList.indexOf(productList.get(i)), product);
+    public void findByName(String name) {
+        for (Product product: productList) {
+            if (product.getProductName().contains(name)){
+                System.out.println(product);
             }
         }
-
     }
+
+    @Override
+    public void searchPriceRange(int lowPrice, int highPrice) {
+        for (Product product : productList) {
+            if (product.getProductPrice() >= lowPrice && product.getProductPrice() <= highPrice){
+                System.out.println(product);
+            }
+        }
+    }
+
+
 }

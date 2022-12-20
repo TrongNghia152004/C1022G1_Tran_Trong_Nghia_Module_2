@@ -2,8 +2,6 @@ package collection_framework.bai_tap.Service;
 
 import collection_framework.bai_tap.Model.Product;
 
-import java.util.List;
-
 public interface IProductService {
     void addProduct(Product product);
 
@@ -18,5 +16,11 @@ public interface IProductService {
     void sortAscending();
 
     void sortDescending();
+
+    Product findById(int id);
+
+    void findByName(String name);
+
+    void searchPriceRange(int lowPrice , int highPrice);
 }
 

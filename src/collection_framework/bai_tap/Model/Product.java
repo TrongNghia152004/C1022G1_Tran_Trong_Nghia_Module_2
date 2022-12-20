@@ -2,8 +2,6 @@ package collection_framework.bai_tap.Model;
 
 import org.jetbrains.annotations.NotNull;
 
-import java.util.Scanner;
-
 public class Product implements Comparable<Product> {
     private int id;
     private String productName;
