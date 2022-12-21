@@ -4,7 +4,7 @@ import collection_framework.bai_tap.Model.Product;
 import collection_framework.bai_tap.Repository.IProductRepository;
 import collection_framework.bai_tap.Repository.ProductRepository;
 
-public class ProductManager implements IProductService {
+public class ProductService implements IProductService {
     private IProductRepository repository = new ProductRepository();
 
     @Override

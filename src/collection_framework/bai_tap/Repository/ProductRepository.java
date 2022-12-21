@@ -8,17 +8,11 @@ import java.util.List;
 
 public class ProductRepository implements IProductRepository {
     public static List<Product> productList = new ArrayList<>();
-
-    Product product1 = new Product(1, "Thuốc cảm", 25000);
-    Product product3 = new Product(3, "Thuốc ho", 50000);
-    Product product2 = new Product(2, "Thuốc sốt", 30000);
-
-    public ProductRepository() {
-        productList.add(product1);
-        productList.add(product2);
-        productList.add(product3);
-    }
-
+ static {
+     productList.add(new Product(1, "Thuốc cảm", 25000));
+     productList.add(new Product(2, "Thuốc sốt", 30000));
+     productList.add(new Product(3, "Thuốc ho", 50000));
+ }
 
     @Override
     public void addProduct(Product product) {

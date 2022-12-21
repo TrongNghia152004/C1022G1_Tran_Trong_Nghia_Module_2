@@ -2,12 +2,12 @@ package collection_framework.bai_tap.Controller;
 
 import collection_framework.bai_tap.Model.Product;
 import collection_framework.bai_tap.Service.IProductService;
-import collection_framework.bai_tap.Service.ProductManager;
+import collection_framework.bai_tap.Service.ProductService;
 
 import java.util.Scanner;
 
 public class ProductController {
-    private static IProductService productManager = new ProductManager();
+    private static IProductService productManager = new ProductService();
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
