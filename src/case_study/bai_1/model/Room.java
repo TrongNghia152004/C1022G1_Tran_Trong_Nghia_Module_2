@@ -1,5 +1,18 @@
 package case_study.bai_1.model;
 
+import java.util.Date;
+
 public class Room extends Facility{
-    
+    private String dichVuMienPhi;
+    public Room(String tenDichVu, double dienTichSuDung, double chiPhiThue, int soLuongNguoiToiDa, Date kieuThue, String dichVuMienPhi) {
+        super(tenDichVu, dienTichSuDung, chiPhiThue, soLuongNguoiToiDa, kieuThue);
+        this.dichVuMienPhi = dichVuMienPhi;
+    }
+
+    @Override
+    public String toString() {
+        return "Room{" +
+                "dichVuMienPhi='" + dichVuMienPhi + '\'' +
+                '}';
+    }
 }

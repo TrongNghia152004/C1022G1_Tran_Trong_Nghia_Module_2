@@ -2,7 +2,7 @@ package case_study.bai_1.model;
 
 import java.util.Date;
 
-public class Facility {
+public abstract class Facility {
     private String tenDichVu;
     private double dienTichSuDung;
     private double chiPhiThue;
