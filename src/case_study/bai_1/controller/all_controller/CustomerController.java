@@ -52,19 +52,19 @@ public class CustomerController {
                     String oldCustomerId = sc.nextLine();
                     Customer c = customerService.findByCustomerId(oldCustomerId);
                     if (c != null) {
-                        System.out.println("Nhập tên nhân viên");
+                        System.out.println("Nhập tên khách hàng");
                         String newName = sc.nextLine();
-                        System.out.println("Nhập ngày sinh nhân viên");
+                        System.out.println("Nhập ngày sinh khách hàng");
                         String newDateOfBirth = sc.nextLine();
-                        System.out.println("Nhập giới tính nhân viên");
+                        System.out.println("Nhập giới tính khách hàng");
                         String newGender = sc.nextLine();
-                        System.out.println("Nhập CMND nhân viên");
+                        System.out.println("Nhập CMND khách hàng");
                         String newIdentityCard = sc.nextLine();
-                        System.out.println("Nhập SĐT nhân viên");
+                        System.out.println("Nhập SĐT khách hàng");
                         String newPhoneNumber = sc.nextLine();
-                        System.out.println("Nhập email nhân viên");
+                        System.out.println("Nhập email khách hàng");
                         String newEmail = sc.nextLine();
-                        System.out.println("Nhập loại khách");
+                        System.out.println("Nhập loại khách hàng");
                         String newTypeOfGuest = sc.nextLine();
                         System.out.println("Nhập địa chỉ khách hàng");
                         String newAddress = sc.nextLine();
