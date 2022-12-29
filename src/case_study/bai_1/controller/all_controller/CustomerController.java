@@ -4,7 +4,6 @@ import case_study.bai_1.controller.FuramaController;
 import case_study.bai_1.model.Customer;
 import case_study.bai_1.service.all_class_service.CustomerServiceImpl;
 import case_study.bai_1.service.all_service_interface.ICustomerService;
-import com.sun.corba.se.impl.resolver.SplitLocalResolverImpl;
 
 import java.util.Scanner;
 
@@ -45,7 +44,8 @@ public class CustomerController {
                     String typeOfGuest = sc.nextLine();
                     System.out.println("Nhập địa chỉ khách hàng");
                     String address = sc.nextLine();
-                    customerService.add(new Customer(customerId, name, dateOfBirth, gender, identityCard, phoneNumber, email, typeOfGuest, address));
+                    customerService.add(new Customer(customerId, name, dateOfBirth, gender, identityCard, phoneNumber, email
+                            , typeOfGuest, address));
                     break;
                 case 3:
                     System.out.println("Nhập id khách hàng cần sửa");

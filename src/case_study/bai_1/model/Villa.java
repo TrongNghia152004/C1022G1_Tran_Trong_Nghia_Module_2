@@ -3,50 +3,49 @@ package case_study.bai_1.model;
 import java.util.Date;
 
 public class Villa extends Facility {
-    private String tieuChuanPhong;
-    private double dienTichHoboi;
-    private int soTang;
+    private String roomStandard;
+    private String swimmingPoolArea;
+    private String numberOfFloors;
 
-    public Villa() {
+    public Villa(String serviceName, String usableArea, String rentalCosts, String maxNumberOfPeople, String rentalType, String roomStandard, String swimmingPoolArea, String numberOfFloors) {
+        super(serviceName, usableArea, rentalCosts, maxNumberOfPeople, rentalType);
+        this.roomStandard = roomStandard;
+        this.swimmingPoolArea = swimmingPoolArea;
+        this.numberOfFloors = numberOfFloors;
     }
 
-    public Villa(String tenDichVu, double dienTichSuDung, double chiPhiThue, int soLuongNguoiToiDa, Date kieuThue, String tieuChuanPhong, double dienTichHoboi, int soTang) {
-        super(tenDichVu, dienTichSuDung, chiPhiThue, soLuongNguoiToiDa, kieuThue);
-        this.tieuChuanPhong = tieuChuanPhong;
-        this.dienTichHoboi = dienTichHoboi;
-        this.soTang = soTang;
+    public String getRoomStandard() {
+        return roomStandard;
     }
 
-    public String getTieuChuanPhong() {
-        return tieuChuanPhong;
+    public void setRoomStandard(String roomStandard) {
+        this.roomStandard = roomStandard;
     }
 
-    public void setTieuChuanPhong(String tieuChuanPhong) {
-        this.tieuChuanPhong = tieuChuanPhong;
+    public String getSwimmingPoolArea() {
+        return swimmingPoolArea;
     }
 
-    public double getDienTichHoboi() {
-        return dienTichHoboi;
+    public void setSwimmingPoolArea(String swimmingPoolArea) {
+        this.swimmingPoolArea = swimmingPoolArea;
     }
 
-    public void setDienTichHoboi(double dienTichHoboi) {
-        this.dienTichHoboi = dienTichHoboi;
+    public String getNumberOfFloors() {
+        return numberOfFloors;
     }
 
-    public int getSoTang() {
-        return soTang;
-    }
-
-    public void setSoTang(int soTang) {
-        this.soTang = soTang;
+    public void setNumberOfFloors(String numberOfFloors) {
+        this.numberOfFloors = numberOfFloors;
     }
 
     @Override
     public String toString() {
         return "Villa{" +
-                "tieuChuanPhong='" + tieuChuanPhong + '\'' +
-                ", dienTichHoboi=" + dienTichHoboi +
-                ", soTang=" + soTang +
+                super.toString()
+                +
+                "roomStandard='" + roomStandard + '\'' +
+                ", swimmingPoolArea='" + swimmingPoolArea + '\'' +
+                ", numberOfFloors='" + numberOfFloors + '\'' +
                 '}';
     }
 }

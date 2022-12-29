@@ -1,18 +1,27 @@
 package case_study.bai_1.model;
 
-import java.util.Date;
+public class Room extends Facility {
+    private String freeService;
 
-public class Room extends Facility{
-    private String dichVuMienPhi;
-    public Room(String tenDichVu, double dienTichSuDung, double chiPhiThue, int soLuongNguoiToiDa, Date kieuThue, String dichVuMienPhi) {
-        super(tenDichVu, dienTichSuDung, chiPhiThue, soLuongNguoiToiDa, kieuThue);
-        this.dichVuMienPhi = dichVuMienPhi;
+    public Room(String serviceName, String usableArea, String rentalCosts, String maxNumberOfPeople, String rentalType, String freeService) {
+        super(serviceName, usableArea, rentalCosts, maxNumberOfPeople, rentalType);
+        this.freeService = freeService;
+    }
+
+    public String getFreeService() {
+        return freeService;
+    }
+
+    public void setFreeService(String freeService) {
+        this.freeService = freeService;
     }
 
     @Override
     public String toString() {
         return "Room{" +
-                "dichVuMienPhi='" + dichVuMienPhi + '\'' +
+                super.toString()
+                +
+                "freeService='" + freeService + '\'' +
                 '}';
     }
 }
