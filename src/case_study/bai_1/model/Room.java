@@ -3,8 +3,8 @@ package case_study.bai_1.model;
 public class Room extends Facility {
     private String freeService;
 
-    public Room(String serviceName, String usableArea, String rentalCosts, String maxNumberOfPeople, String rentalType, String freeService) {
-        super(serviceName, usableArea, rentalCosts, maxNumberOfPeople, rentalType);
+    public Room(String serviceCode ,String serviceName, String usableArea, String rentalCosts, String maxNumberOfPeople, String rentalType, String freeService) {
+        super(serviceCode ,serviceName, usableArea, rentalCosts, maxNumberOfPeople, rentalType);
         this.freeService = freeService;
     }
 

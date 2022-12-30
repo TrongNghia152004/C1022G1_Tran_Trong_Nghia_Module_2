@@ -3,6 +3,7 @@ package case_study.bai_1.model;
 import java.util.Date;
 
 public abstract class Facility {
+    private String serviceCode;
     private String serviceName;
     private String usableArea;
     private String rentalCosts;
@@ -12,7 +13,8 @@ public abstract class Facility {
     public Facility() {
     }
 
-    public Facility(String serviceName, String usableArea, String rentalCosts, String maxNumberOfPeople, String rentalType) {
+    public Facility(String serviceCode ,String serviceName, String usableArea, String rentalCosts, String maxNumberOfPeople, String rentalType) {
+        this.serviceCode = serviceCode;
         this.serviceName = serviceName;
         this.usableArea = usableArea;
         this.rentalCosts = rentalCosts;
@@ -60,10 +62,19 @@ public abstract class Facility {
         this.rentalType = rentalType;
     }
 
+    public String getServiceCode() {
+        return serviceCode;
+    }
+
+    public void setServiceCode(String serviceCode) {
+        this.serviceCode = serviceCode;
+    }
+
     @Override
     public String toString() {
         return "Facility{" +
-                "serviceName='" + serviceName + '\'' +
+                "serviceCode='" + serviceCode + '\'' +
+                ", serviceName='" + serviceName + '\'' +
                 ", usableArea='" + usableArea + '\'' +
                 ", rentalCosts='" + rentalCosts + '\'' +
                 ", maxNumberOfPeople='" + maxNumberOfPeople + '\'' +
