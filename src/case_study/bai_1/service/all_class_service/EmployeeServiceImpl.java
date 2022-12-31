@@ -1,8 +1,8 @@
 package case_study.bai_1.service.all_class_service;
 
 import case_study.bai_1.model.Employee;
-import case_study.bai_1.repository.EmployeeRepository;
-import case_study.bai_1.repository.IEmployeeRepository;
+import case_study.bai_1.repository.all_repo_class.EmployeeRepository;
+import case_study.bai_1.repository.all_repo_interface.IEmployeeRepository;
 import case_study.bai_1.service.all_service_interface.IEmployeeService;
 
 public class EmployeeServiceImpl implements IEmployeeService {
@@ -27,7 +27,6 @@ public class EmployeeServiceImpl implements IEmployeeService {
     public void edit(String employeeId, Employee employee) {
         repository.edit(employeeId, employee);
     }
-
 
     @Override
     public Employee findById(String employeeId) {

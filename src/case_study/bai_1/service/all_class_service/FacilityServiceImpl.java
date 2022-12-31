@@ -1,9 +1,9 @@
 package case_study.bai_1.service.all_class_service;
 
-import case_study.bai_1.model.Room;
-import case_study.bai_1.model.Villa;
-import case_study.bai_1.repository.FacilityRepository;
-import case_study.bai_1.repository.IFacilityRepository;
+import case_study.bai_1.model.model_facility.Room;
+import case_study.bai_1.model.model_facility.Villa;
+import case_study.bai_1.repository.all_repo_class.FacilityRepository;
+import case_study.bai_1.repository.all_repo_interface.IFacilityRepository;
 import case_study.bai_1.service.all_service_interface.IFacilityService;
 
 public class FacilityServiceImpl implements IFacilityService {

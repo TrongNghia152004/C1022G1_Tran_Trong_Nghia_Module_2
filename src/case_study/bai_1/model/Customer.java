@@ -1,5 +1,7 @@
 package case_study.bai_1.model;
 
+import com.sun.org.apache.regexp.internal.RE;
+
 public class Customer extends Person{
     private String customerId;
     private String typeOfGuest;
@@ -39,9 +41,19 @@ public class Customer extends Person{
     @Override
     public String toString() {
         return "Customer{" +
-                "customerId=" + customerId +
-                ", typeOfGuest='" + typeOfGuest + '\'' +
-                ", address='" + address + '\'' +
+                "customerId=" + this.customerId +
+                "name='" + super.getName() + '\'' +
+                ", dateOfBirth='" + super.getDateOfBirth() + '\'' +
+                ", gender='" + super.getGender() + '\'' +
+                ", identityCard='" + super.getIdentityCard() + '\'' +
+                ", phoneNumber='" + super.getPhoneNumber() + '\'' +
+                ", email='" + super.getEmail() + '\'' +
+                ", typeOfGuest='" + this.typeOfGuest + '\'' +
+                ", address='" + this.address + '\'' +
                 '}';
+    }
+    public String formatCustomer(){
+        final String COMMA = ",";
+        return this.customerId + COMMA + super.convertLine() + COMMA + this.typeOfGuest + COMMA + this.address;
     }
 }

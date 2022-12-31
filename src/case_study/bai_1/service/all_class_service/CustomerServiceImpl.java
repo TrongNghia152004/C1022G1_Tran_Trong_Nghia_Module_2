@@ -1,8 +1,8 @@
 package case_study.bai_1.service.all_class_service;
 
 import case_study.bai_1.model.Customer;
-import case_study.bai_1.repository.CustomerRepository;
-import case_study.bai_1.repository.ICustomerRepository;
+import case_study.bai_1.repository.all_repo_class.CustomerRepository;
+import case_study.bai_1.repository.all_repo_interface.ICustomerRepository;
 import case_study.bai_1.service.all_service_interface.ICustomerService;
 
 public class CustomerServiceImpl implements ICustomerService {

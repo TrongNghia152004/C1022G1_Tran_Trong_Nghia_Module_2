@@ -1,4 +1,6 @@
-package case_study.bai_1.model;
+package case_study.bai_1.model.model_facility;
+
+import case_study.bai_1.model.Facility;
 
 public class Room extends Facility {
     private String freeService;
@@ -19,9 +21,17 @@ public class Room extends Facility {
     @Override
     public String toString() {
         return "Room{" +
-                super.toString()
-                +
+                "serviceCode='" + super.getServiceCode() + '\'' +
+                ", serviceName='" + super.getServiceName() + '\'' +
+                ", usableArea='" + super.getUsableArea() + '\'' +
+                ", rentalCosts='" + super.getRentalCosts() + '\'' +
+                ", maxNumberOfPeople='" + super.getMaxNumberOfPeople() + '\'' +
+                ", rentalType='" + super.getRentalType() + '\'' +
                 "freeService='" + freeService + '\'' +
                 '}';
+    }
+    public String formatCSVRoom(){
+        final String COMMA = ",";
+        return super.convertLine2() + COMMA + this.freeService;
     }
 }

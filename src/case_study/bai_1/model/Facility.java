@@ -81,4 +81,9 @@ public abstract class Facility {
                 ", rentalType='" + rentalType + '\'' +
                 '}';
     }
+    public String convertLine2(){
+        final String COMMA = ",";
+        return this.serviceCode + COMMA + this.serviceName + COMMA + this.usableArea + COMMA + this.rentalCosts
+                + COMMA + this.maxNumberOfPeople + COMMA + this.rentalType;
+    }
 }

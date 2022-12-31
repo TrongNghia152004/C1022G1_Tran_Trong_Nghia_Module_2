@@ -1,6 +1,6 @@
-package case_study.bai_1.model;
+package case_study.bai_1.model.model_facility;
 
-import java.util.Date;
+import case_study.bai_1.model.Facility;
 
 public class Villa extends Facility {
     private String roomStandard;
@@ -41,11 +41,19 @@ public class Villa extends Facility {
     @Override
     public String toString() {
         return "Villa{" +
-                super.toString()
-                +
+                "serviceCode='" + super.getServiceCode() + '\'' +
+                ", serviceName='" + super.getServiceName() + '\'' +
+                ", usableArea='" + super.getUsableArea() + '\'' +
+                ", rentalCosts='" + super.getRentalCosts() + '\'' +
+                ", maxNumberOfPeople='" + super.getMaxNumberOfPeople() + '\'' +
+                ", rentalType='" + super.getRentalType() + '\'' +
                 "roomStandard='" + roomStandard + '\'' +
                 ", swimmingPoolArea='" + swimmingPoolArea + '\'' +
                 ", numberOfFloors='" + numberOfFloors + '\'' +
                 '}';
+    }
+    public String formatCSVVilla(){
+        final String COMMA = ",";
+        return super.convertLine2() + COMMA +this.roomStandard + COMMA + this.swimmingPoolArea + COMMA + this.numberOfFloors;
     }
 }

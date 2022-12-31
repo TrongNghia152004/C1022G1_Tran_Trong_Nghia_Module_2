@@ -1,8 +1,8 @@
 package case_study.bai_1.controller.all_controller;
 
 import case_study.bai_1.controller.FuramaController;
-import case_study.bai_1.model.Room;
-import case_study.bai_1.model.Villa;
+import case_study.bai_1.model.model_facility.Room;
+import case_study.bai_1.model.model_facility.Villa;
 import case_study.bai_1.service.all_class_service.FacilityServiceImpl;
 import case_study.bai_1.service.all_service_interface.IFacilityService;
 import case_study.bai_1.util.Validate;

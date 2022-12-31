@@ -72,11 +72,17 @@ public abstract class Person {
     public String toString() {
         return "Person{" +
                 "name='" + name + '\'' +
-                ", dayOfBirth=" + dateOfBirth +
+                ", dateOfBirth='" + dateOfBirth + '\'' +
                 ", gender='" + gender + '\'' +
-                ", identityCard=" + identityCard +
-                ", phoneNumber=" + phoneNumber +
+                ", identityCard='" + identityCard + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
                 ", email='" + email + '\'' +
                 '}';
+    }
+
+    public String convertLine(){
+        final String COMMA = ",";
+        return this.name + COMMA +this.dateOfBirth + COMMA +this.gender + COMMA +this.identityCard + COMMA +this.phoneNumber
+                + COMMA + this.email;
     }
 }

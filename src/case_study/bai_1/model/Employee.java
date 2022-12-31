@@ -49,10 +49,21 @@ public class Employee extends Person {
     @Override
     public String toString() {
         return "Employee{" +
-                "employeeId=" + employeeId +
-                ", level='" + level + '\'' +
-                ", position='" + position + '\'' +
-                ", wage=" + wage +
+                "employeeId='" + employeeId + '\'' +
+                "name='" + super.getName() + '\'' +
+                ", dateOfBirth='" + super.getDateOfBirth() + '\'' +
+                ", gender='" + super.getGender() + '\'' +
+                ", identityCard='" + super.getIdentityCard() + '\'' +
+                ", phoneNumber='" + super.getPhoneNumber() + '\'' +
+                ", email='" + super.getEmail() + '\'' +
+                ", level='" + this.level + '\'' +
+                ", position='" + this.position + '\'' +
+                ", wage='" + this.wage + '\'' +
                 '}';
+    }
+
+    public String formatCSVEmployee() {
+        final String COMMA = ",";
+        return this.employeeId + COMMA + super.convertLine() + COMMA + this.level + COMMA + this.position + COMMA + wage;
     }
 }
