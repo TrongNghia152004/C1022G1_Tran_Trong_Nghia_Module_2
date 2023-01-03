@@ -31,6 +31,5 @@ public class FacilityServiceImpl implements IFacilityService {
 
     @Override
     public void add(Object object) {
-        facilityRepository.add(object);
     }
 }

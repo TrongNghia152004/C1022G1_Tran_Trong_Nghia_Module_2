@@ -28,19 +28,19 @@ public class CustomerController {
                 case 2:
                     System.out.println("Nhập id của khách hàng");
                     String customerId = sc.nextLine();
-                    System.out.println("Nhập tên nhân viên");
+                    System.out.println("Nhập tên khách hàng");
                     String name = sc.nextLine();
-                    System.out.println("Nhập ngày sinh nhân viên");
+                    System.out.println("Nhập ngày sinh khách hàng");
                     String dateOfBirth = sc.nextLine();
-                    System.out.println("Nhập giới tính nhân viên");
+                    System.out.println("Nhập giới tính khách hàng");
                     String gender = sc.nextLine();
-                    System.out.println("Nhập CMND nhân viên");
+                    System.out.println("Nhập CMND khách hàng");
                     String identityCard = sc.nextLine();
-                    System.out.println("Nhập SĐT nhân viên");
+                    System.out.println("Nhập SĐT khách hàng");
                     String phoneNumber = sc.nextLine();
-                    System.out.println("Nhập email nhân viên");
+                    System.out.println("Nhập email khách hàng");
                     String email = sc.nextLine();
-                    System.out.println("Nhập loại khách");
+                    System.out.println("Nhập loại khách hàng");
                     String typeOfGuest = sc.nextLine();
                     System.out.println("Nhập địa chỉ khách hàng");
                     String address = sc.nextLine();

@@ -1,8 +1,6 @@
 package case_study.bai_1.data.all_rw_class.read_write_facility;
 
-import case_study.bai_1.model.Facility;
 import case_study.bai_1.model.model_facility.Room;
-import org.omg.CORBA.PUBLIC_MEMBER;
 
 import java.io.*;
 import java.util.LinkedHashMap;
@@ -52,7 +50,7 @@ public class RWRoom {
             fileWriter = new FileWriter(FILE_PATH);
             bufferedWriter = new BufferedWriter(fileWriter);
             for (Map.Entry<Room , Integer> entry: rMap.entrySet()) {
-                bufferedWriter.write(entry.getKey() + "," + entry.getValue());
+                bufferedWriter.write(entry.getKey().formatCSVRoom() + "," + entry.getValue());
                 bufferedWriter.newLine();
             }
         } catch (IOException e) {

@@ -11,7 +11,7 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class FacilityRepository implements IFacilityRepository {
-    private static Map<Facility , Integer> facilityMap = new LinkedHashMap<>();
+    private static Map<Facility, Integer> facilityMap = new LinkedHashMap<>();
 //    static {
 //        facilityMap.put(new Room("SVRO-1","Room1","32.0","5000000",
 //                "10","7 day","buffer"),2);
@@ -29,13 +29,16 @@ public class FacilityRepository implements IFacilityRepository {
 
     @Override
     public void display() {
-        Map<Room , Integer> rMap = RWRoom.readCSVRoom();
+        Map<Room, Integer> rMap = RWRoom.readCSVRoom();
         facilityMap.putAll(rMap);
         Map<Villa, Integer> vMap = RWVilla.readCSVVilla();
         facilityMap.putAll(vMap);
-        for (Map.Entry<Facility,Integer> entry: facilityMap.entrySet()) {
-                System.out.println(entry.getKey() + "số lần sử dụng: " + entry.getValue());
-            }
+        for (Map.Entry<Villa, Integer> entry : vMap.entrySet()) {
+            System.out.println(entry.getKey() + "số lần sử dụng: " + entry.getValue());
+        }
+        for (Map.Entry<Room,Integer> entry: rMap.entrySet()) {
+            System.out.println(entry.getKey() + "số lần sử dụng" + entry.getValue());
+        }
     }
 
     @Override
@@ -45,7 +48,7 @@ public class FacilityRepository implements IFacilityRepository {
     @Override
     public void displayListFacilityMaintenance() {
         for (Map.Entry<Facility, Integer> entry : facilityMap.entrySet()) {
-            if (entry.getValue() >= 5){
+            if (entry.getValue() >= 5) {
                 System.out.println(entry.getKey() + "cần bảo trì");
             }
         }
@@ -53,15 +56,15 @@ public class FacilityRepository implements IFacilityRepository {
 
     @Override
     public void addRoom(Room room) {
-        Map<Room , Integer> rMap = RWRoom.readCSVRoom();
-        facilityMap.put(room , 0);
+        Map<Room, Integer> rMap = RWRoom.readCSVRoom();
+        rMap.put(room,0);
         RWRoom.writeCSVRoom(rMap);
     }
 
     @Override
     public void addVilla(Villa villa) {
         Map<Villa, Integer> vMap = RWVilla.readCSVVilla();
-        facilityMap.put(villa,0);
+        vMap.put(villa,0);
         RWVilla.writeCSVVilla(vMap);
     }
 }

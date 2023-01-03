@@ -26,17 +26,24 @@ public class RWVilla {
                 String rentalCosts = temp[3];
                 String maxNumberOfPeople = temp[4];
                 String rentalType = temp[5];
-                String roomStandard = temp[7];
-                String swimmingPoolArea = temp[8];
-                String numberOfFloors = temp[9];
-                villa = new Villa(serviceCode, serviceName , usableArea , rentalCosts , maxNumberOfPeople , rentalType , roomStandard,
+                String roomStandard = temp[6];
+                String swimmingPoolArea = temp[7];
+                String numberOfFloors = temp[8];
+                villa = new Villa(serviceCode, serviceName , usableArea , rentalCosts ,
+                        maxNumberOfPeople , rentalType , roomStandard,
                         swimmingPoolArea,numberOfFloors);
-                vMap.put(villa , Integer.parseInt(temp[10]));
+                vMap.put(villa , Integer.parseInt(temp[9]));
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
+        }finally {
+            try {
+                bufferedReader.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
         return vMap;
     }
@@ -47,7 +54,7 @@ public class RWVilla {
             fileWriter = new FileWriter(FILE_PATH);
             bufferedWriter = new BufferedWriter(fileWriter);
             for (Map.Entry<Villa , Integer> entry: vMap.entrySet()) {
-                bufferedWriter.write(entry.getKey() + "," + entry.getValue());
+                bufferedWriter.write(entry.getKey().formatCSVVilla() + "," + entry.getValue());
                 bufferedWriter.newLine();
             }
         } catch (IOException e) {
