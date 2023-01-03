@@ -5,6 +5,7 @@ import case_study.bai_1.controller.all_controller.CustomerController;
 import case_study.bai_1.controller.all_controller.EmployeeController;
 import case_study.bai_1.controller.all_controller.FacilityController;
 import case_study.bai_1.controller.all_controller.PromotionController;
+import case_study.bai_1.util.NotFoundException;
 
 import java.util.Scanner;
 
@@ -17,31 +18,39 @@ public class FuramaController {
                     + "4. Booking Management\n"
                     + "5. Promotion Management\n"
                     + "6. Exit");
+            System.out.println("Mời bạn nhập menu: ");
             do {
-                System.out.println("Mời bạn nhập menu: ");
                 Scanner sc = new Scanner(System.in);
-                int choice = Integer.parseInt(sc.nextLine());
-                switch (choice){
-                    case 1:
-                        EmployeeController.employeeController();
-                        break;
-                    case 2:
-                        CustomerController.customerController();
-                        break;
-                    case 3:
-                        FacilityController.facilityController();
-                        break;
-                    case 4:
-                        BookingController.bookingController();
-                        break;
-                    case 5:
-                        PromotionController.promotionController();
-                        break;
-                    case 6:
-                        System.out.println("Exit");
-                        break;
-                    default:
-                        System.err.println("Mời bạn nhập lại: ");
+                try {
+                    int choice = Integer.parseInt(sc.nextLine());
+                    switch (choice){
+                        case 1:
+                            try {
+                                EmployeeController.employeeController();
+                            } catch (NotFoundException e) {
+                                e.printStackTrace();
+                            }
+                            break;
+                        case 2:
+                            CustomerController.customerController();
+                            break;
+                        case 3:
+                            FacilityController.facilityController();
+                            break;
+                        case 4:
+                            BookingController.bookingController();
+                            break;
+                        case 5:
+                            PromotionController.promotionController();
+                            break;
+                        case 6:
+                            System.out.println("Exit");
+                            break;
+                        default:
+                            System.err.println("Input number 1 to 6: ");
+                    }
+                }catch (NumberFormatException e){
+                    System.err.println("Input number");
                 }
             }while (true);
         }
