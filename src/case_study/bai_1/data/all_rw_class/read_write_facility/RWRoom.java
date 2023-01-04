@@ -63,4 +63,24 @@ public class RWRoom {
             }
         }
     }
+    public static void writeCSVRoom2(Map<Room, Integer> rMap){
+        FileWriter fileWriter = null;
+        BufferedWriter bufferedWriter = null;
+        try {
+            fileWriter = new FileWriter(FILE_PATH);
+            bufferedWriter = new BufferedWriter(fileWriter);
+            for (Map.Entry<Room , Integer> entry: rMap.entrySet()) {
+                bufferedWriter.write(entry.getKey().formatCSVRoom() + "," + entry.getValue());
+                bufferedWriter.newLine();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }finally {
+            try {
+                bufferedWriter.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
 }

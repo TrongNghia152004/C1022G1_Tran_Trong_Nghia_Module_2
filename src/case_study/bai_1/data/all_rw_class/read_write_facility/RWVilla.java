@@ -67,4 +67,24 @@ public class RWVilla {
             }
         }
     }
+    public static void writeCSVVilla2(Map<Villa, Integer> vMap){
+        FileWriter fileWriter = null;
+        BufferedWriter bufferedWriter = null;
+        try {
+            fileWriter = new FileWriter(FILE_PATH);
+            bufferedWriter = new BufferedWriter(fileWriter);
+            for (Map.Entry<Villa , Integer> entry: vMap.entrySet()) {
+                bufferedWriter.write(entry.getKey().formatCSVVilla() + "," + entry.getValue());
+                bufferedWriter.newLine();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }finally {
+            try {
+                bufferedWriter.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
 }

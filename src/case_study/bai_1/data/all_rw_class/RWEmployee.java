@@ -67,4 +67,24 @@ public class RWEmployee {
             }
         }
     }
+    public static void writeCSVEmployee2(List<Employee> employeeList){
+        FileWriter fileWriter = null;
+        BufferedWriter bufferedWriter = null;
+        try {
+            fileWriter = new FileWriter(FILE_PATH);
+            bufferedWriter = new BufferedWriter(fileWriter);
+            for (Employee e: employeeList) {
+                bufferedWriter.write(e.formatCSVEmployee());
+                bufferedWriter.newLine();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }finally {
+            try {
+                bufferedWriter.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
 }

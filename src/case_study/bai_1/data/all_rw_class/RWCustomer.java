@@ -49,6 +49,26 @@ public class RWCustomer {
         FileWriter fileWriter = null;
         BufferedWriter bufferedWriter = null;
         try {
+            fileWriter = new FileWriter(FILE_PATH , true);
+            bufferedWriter = new BufferedWriter(fileWriter);
+            for (Customer c: customerList) {
+                bufferedWriter.write(c.formatCustomer());
+                bufferedWriter.newLine();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }finally {
+            try {
+                bufferedWriter.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+    public static void writeCSVCustomer2(List<Customer> customerList){
+        FileWriter fileWriter = null;
+        BufferedWriter bufferedWriter = null;
+        try {
             fileWriter = new FileWriter(FILE_PATH);
             bufferedWriter = new BufferedWriter(fileWriter);
             for (Customer c: customerList) {

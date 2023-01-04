@@ -19,8 +19,8 @@ public class CustomerServiceImpl implements ICustomerService {
     }
 
     @Override
-    public void edit(String customerId, Customer customer) {
-        repository.edit(customerId, customer);
+    public void edit(Customer customer) {
+        repository.edit(customer);
     }
 
     @Override

@@ -24,8 +24,8 @@ public class EmployeeServiceImpl implements IEmployeeService {
     }
 
     @Override
-    public void edit(String employeeId, Employee employee) {
-        repository.edit(employeeId, employee);
+    public void edit(Employee employee) {
+        repository.edit(employee);
     }
 
     @Override

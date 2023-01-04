@@ -34,10 +34,10 @@ public class FacilityRepository implements IFacilityRepository {
         Map<Villa, Integer> vMap = RWVilla.readCSVVilla();
         facilityMap.putAll(vMap);
         for (Map.Entry<Villa, Integer> entry : vMap.entrySet()) {
-            System.out.println(entry.getKey() + "số lần sử dụng: " + entry.getValue());
+            System.out.println(entry.getKey() + "number of uses: " + entry.getValue());
         }
         for (Map.Entry<Room,Integer> entry: rMap.entrySet()) {
-            System.out.println(entry.getKey() + "số lần sử dụng" + entry.getValue());
+            System.out.println(entry.getKey() + "number of uses: " + entry.getValue());
         }
     }
 
@@ -49,7 +49,7 @@ public class FacilityRepository implements IFacilityRepository {
     public void displayListFacilityMaintenance() {
         for (Map.Entry<Facility, Integer> entry : facilityMap.entrySet()) {
             if (entry.getValue() >= 5) {
-                System.out.println(entry.getKey() + "cần bảo trì");
+                System.out.println(entry.getKey() + "need maintenance");
             }
         }
     }

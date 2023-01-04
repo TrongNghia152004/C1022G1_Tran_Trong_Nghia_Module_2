@@ -7,7 +7,7 @@ public interface IEmployeeRepository extends IRepository {
 
     void delete(String employeeId);
 
-    void edit(String employeeId, Employee employee);
+    void edit(Employee employee);
 
     Employee findById(String employeeId);
 

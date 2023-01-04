@@ -7,7 +7,7 @@ public interface IEmployeeService extends IService {
 
     void delete(String employeeId);
 
-    void edit(String employeeId, Employee employee);
+    void edit(Employee employee);
 
     Employee findById(String employeeId);
 }

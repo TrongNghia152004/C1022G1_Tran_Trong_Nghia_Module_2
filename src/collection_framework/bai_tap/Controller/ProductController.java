@@ -57,7 +57,6 @@ public class ProductController {
                     } else {
                         System.out.println("Not existed");
                     }
-
                     break;
                 case 5:
                     System.out.println("Nhập tên sản phẩm: ");
